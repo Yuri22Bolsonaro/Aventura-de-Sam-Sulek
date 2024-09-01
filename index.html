@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700&display=swap" rel="stylesheet">
+    <title>A Jornada de Sam Sulek</title>
+</head>
+<body>
+    <main>
+        <div class="passo ativo" id="passo-0">
+            <img src="img/cenario-passo0.png" alt="">
+            <p>Sam Sulek, um fisiculturista determinado, ouviu falar de uma substância lendária: a Trembolona Mais Concentrada, capaz de dar força e músculos inigualáveis. Ele tem duas opções para começar sua jornada. Onde ele deve começar?</p>
+            <button class="btn-proximo" data-proximo="1">Entrar na Ironberg</button>
+            <button class="btn-proximo" data-proximo="2">Treinar na academia de idosos</button>
+        </div>
+
+        <div class="passo" id="passo-1">
+            <p>Sam decide treinar na famosa Ironberg. Lá, ele encontra atletas de elite que o desafiam constantemente. Após meses de treino intenso, ele ouve falar de um mestre que pode revelar o segredo da trembolona. O que Sam faz?</p>
+            <button class="btn-proximo" data-proximo="3">Procurar o mestre</button>
+            <button class="btn-proximo" data-proximo="4">Continuar treinando sozinho</button>
+        </div>
+
+        <div class="passo" id="passo-2">
+            <p>Sam opta por treinar na academia de idosos. Apesar de se dedicar, o ambiente não oferece os desafios necessários. Após meses de treino sem progresso, Sam percebe que tomou a decisão errada e se arrepende profundamente.</p>
+            <button class="btn-proximo" data-proximo="12">Final Ruim</button>
+        </div>
+
+        <div class="passo" id="passo-3">
+            <p>Sam encontra o mestre, um ex-campeão mundial que se isolou para estudar os segredos da força. O mestre propõe dois desafios: um treino extremo de resistência ou uma dieta rigorosa e misteriosa. Qual Sam deve escolher?</p>
+            <button class="btn-proximo" data-proximo="5">Treino de resistência extrema</button>
+            <button class="btn-proximo" data-proximo="6">Dieta rigorosa e misteriosa</button>
+        </div>
+
+        <div class="passo" id="passo-4">
+            <p>Sam decide continuar treinando sozinho. Apesar de seu esforço, ele sente que está estagnado. Um dia, ele tenta levantar um peso muito acima de sua capacidade e se machuca gravemente, encerrando sua carreira.</p>
+            <button class="btn-proximo" data-proximo="12">Final Ruim</button>
+        </div>
+
+        <div class="passo" id="passo-5">
+            <p>Sam escolhe o treino de resistência extrema. Durante semanas, ele enfrenta desafios que testam seus limites físicos e mentais. Ao final, o mestre revela uma pista sobre a localização da trembolona: "Procure onde o sol nasce".</p>
+            <button class="btn-proximo" data-proximo="7">Seguir a pista</button>
+            <button class="btn-proximo" data-proximo="8">Ignorar e seguir outra pista</button>
+        </div>
+
+        <div class="passo" id="passo-6">
+            <p>Sam opta pela dieta rigorosa e misteriosa. Ele segue o plano à risca, mas começa a sentir fraqueza e a perder massa muscular. Frustrado, ele decide abandonar a dieta, mas já é tarde demais. Seu corpo não aguenta o estresse e ele desiste da jornada.</p>
+            <button class="btn-proximo" data-proximo="12">Final Ruim</button>
+        </div>
+
+        <div class="passo" id="passo-7">
+            <p>Seguindo a dica do mestre, Sam viaja para o leste, onde o sol nasce. Ele chega a uma academia lendária no Japão, onde apenas os mais fortes são aceitos. Ele deve decidir se tenta se infiltrar ou se desafia o campeão local para ser aceito.</p>
+            <button class="btn-proximo" data-proximo="9">Infiltrar-se na academia</button>
+            <button class="btn-proximo" data-proximo="10">Desafiar o campeão local</button>
+        </div>
+
+        <div class="passo" id="passo-8">
+            <p>Sam decide ignorar a pista e segue uma dica que encontrou em um site obscuro. Ele acaba perdido em uma floresta, onde passa dias sem encontrar nada. Exausto e sem forças, ele abandona a busca e retorna para casa.</p>
+            <button class="btn-proximo" data-proximo="12">Final Ruim</button>
+        </div>
+
+        <div class="passo" id="passo-9">
+            <p>Sam tenta se infiltrar na academia, mas é descoberto pelos seguranças e expulso. Sem outra opção, ele volta para casa, mas nunca mais ouve falar da trembolona. Seu sonho de se tornar o mais forte se desfaz.</p>
+            <button class="btn-proximo" data-proximo="12">Final Ruim</button>
+        </div>
+
+        <div class="passo" id="passo-10">
+            <p>Sam desafia o campeão local e, após uma batalha épica, vence. Impressionado, o mestre da academia revela o segredo final: a localização da trembolona mais concentrada está escondida nas profundezas de uma caverna sagrada.</p>
+            <button class="btn-proximo" data-proximo="11">Explorar a caverna sagrada</button>
+        </div>
+
+        <div class="passo" id="passo-11">
+            <img src="img/cenario-passo12-cidade-perdida.png" alt="encontrando uma cidade maravilhosa perdida no Amazonas">
+            <p>Dentro da caverna, Sam encontra a Trembolona Mais Concentrada. Ele finalmente alcançou o poder supremo que sempre sonhou. Com isso, ele se torna uma lenda viva no mundo da musculação.</p>
+            <button class="btn-proximo" data-proximo="12" data-final="bom">Final Bom</button>
+        </div>
+
+        <div class="passo" id="passo-12">
+            <p id="mensagem-final"></p>
+        </div>
+    </main>
+    <script>
+        document.querySelectorAll('.btn-proximo').forEach(button => {
+            button.addEventListener('click', function() {
+                const proximoPasso = document.getElementById('passo-' + this.getAttribute('data-proximo'));
+                document.querySelector('.passo.ativo').classList.remove('ativo');
+                proximoPasso.classList.add('ativo');
+
+                if (this.getAttribute('data-proximo') === '12') {
+                    const mensagemFinal = this.getAttribute('data-final') === 'bom'
+                        ? "Essa foi a jornada de Sam Sulek. Suas escolhas determinaram seu destino, mostrando que o caminho para a grandeza está cheio de desafios e riscos."
+                        : "Sam Sulek caiu na maldição do frango. Ele jamais ficará gigante";
+                    document.getElementById('mensagem-final').innerText = mensagemFinal;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
