@@ -79,6 +79,7 @@
         </div>
 
         <div class="passo" id="passo-12">
+            <img id="imagem-final" src="" alt="Imagem Final" style="display:none;">
             <p id="mensagem-final"></p>
         </div>
     </main>
@@ -94,6 +95,14 @@
                         ? "Essa foi a jornada de Sam Sulek. Suas escolhas determinaram seu destino, mostrando que o caminho para a grandeza está cheio de desafios e riscos."
                         : "Sam Sulek caiu na maldição do frango. Ele jamais ficará gigante";
                     document.getElementById('mensagem-final').innerText = mensagemFinal;
+
+                    const imagemFinal = document.getElementById('imagem-final');
+                    if (this.getAttribute('data-final') === 'bom') {
+                        imagemFinal.style.display = 'none';
+                    } else {
+                        imagemFinal.src = 'img/fino.png';
+                        imagemFinal.style.display = 'block';
+                    }
                 }
             });
         });
